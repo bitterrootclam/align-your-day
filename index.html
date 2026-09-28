@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Align Your Day</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Align Your Day</h1>
+  <p id="today-date"></p>
+</header>
+<main>
+  <section class="card quote">
+    <h2>Today's Quote</h2>
+    <blockquote id="quote-text"></blockquote>
+    <cite id="quote-author"></cite>
+  </section>
+
+  <section class="card">
+    <h2>Five Goals, Five Areas</h2>
+    <p class="hint">One goal in each area of life. Use the suggestion or write your own.</p>
+    <ul id="goals"></ul>
+    <div class="progress"><div id="goal-bar"></div></div>
+    <p id="goal-count"></p>
+  </section>
+
+  <section class="card">
+    <h2>Weather &amp; Outfit</h2>
+    <div id="weather">Loading weather...</div>
+    <div id="outfit"></div>
+    <button id="retry-weather" class="secondary">Refresh weather</button>
+  </section>
+
+  <section class="card">
+    <h2>Water Tracker</h2>
+    <p><span id="water-now">0</span> / <input id="water-goal" type="number" min="8" step="4" value="60"> oz</p>
+    <div class="progress water"><div id="water-bar"></div></div>
+    <div class="row">
+      <button data-oz="8">+8 oz</button><button data-oz="12">+12 oz</button>
+      <button data-oz="16">+16 oz</button><button id="water-undo" class="secondary">Undo</button>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>One Thing I Learned Today</h2>
+    <textarea id="learned" rows="3" placeholder="Type what you learned..."></textarea>
+  </section>
+
+  <section class="card">
+    <h2>End-of-Day Review</h2>
+    <button id="review-btn">Review my day</button>
+    <div id="review"></div>
+  </section>
+
+  <section class="card">
+    <h2>History</h2>
+    <ul id="history"></ul>
+  </section>
+</main>
+<footer><button id="reset" class="secondary">Reset today</button></footer>
+<script src="app.js"></script>
+</body>
+</html>
