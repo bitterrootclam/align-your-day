@@ -7,12 +7,18 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <link rel="manifest" href="manifest.json">
 <link rel="apple-touch-icon" href="icon.svg">
-<link rel="stylesheet" href="style.css?v=3">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=4">
 </head>
-<body>
+<body class="effervescent">
+<div class="flowers" aria-hidden="true"></div>
 <header>
   <h1>Align Your Day</h1>
   <p id="today-date"></p>
+  <div class="mode-toggle" role="group" aria-label="Display mode">
+    <button data-mode="effervescent">Effervescent</button><button data-mode="austere">Austere</button>
+  </div>
 </header>
 <main>
   <section class="card quote">
@@ -34,6 +40,39 @@
     <div id="weather">Loading weather...</div>
     <div id="outfit"></div>
     <button id="retry-weather" class="secondary">Refresh weather</button>
+  </section>
+
+
+  <section class="card">
+    <h2>Outfit Color Planner</h2>
+    <p class="hint">Tap a color on the wheel, then pick a matching style.</p>
+    <div class="wheel-wrap">
+      <svg id="wheel" viewBox="-110 -110 220 220" role="img" aria-label="Color wheel"></svg>
+      <div>
+        <div class="row harmony" id="harmony">
+          <button data-h="complementary">Complementary</button><button data-h="analogous">Analogous</button>
+          <button data-h="triadic">Triadic</button><button data-h="monochrome">Monochrome</button><button data-h="neutral">With neutrals</button>
+        </div>
+        <div id="palette"></div>
+        <p id="palette-tip" class="hint"></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Build &amp; Match Your Outfit</h2>
+    <div class="builder">
+      <label>Top <select id="top"></select></label><label>Top color <select id="topc"></select></label>
+      <label>Bottom <select id="bottom"></select></label><label>Bottom color <select id="bottomc"></select></label>
+      <label>Shoes <select id="shoes"></select></label><label>Shoe color <select id="shoesc"></select></label>
+      <label>Occasion <select id="occasion"><option>Casual</option><option>School</option><option>Work</option><option>Dressy</option><option>Active</option></select></label>
+    </div>
+    <div id="match"></div>
+    <h3>Accessories</h3>
+    <p class="hint">Suggested ones are highlighted for today's weather and occasion. Tap to add.</p>
+    <div id="accessories" class="chips"></div>
+    <div id="outfit-summary"></div>
+    <button id="save-outfit">Save today's outfit</button>
   </section>
 
   <section class="card">
@@ -63,6 +102,6 @@
   </section>
 </main>
 <footer><button id="reset" class="secondary">Reset today</button></footer>
-<script src="app.js?v=3"></script>
+<script src="app.js?v=4"></script>
 </body>
 </html>

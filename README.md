@@ -12,3 +12,8 @@ A simple local web page to start and finish your day with intention.
 
 ## Run
 Open `index.html` in any web browser. Weather needs an internet connection; allow location for local weather (defaults to Meridian, ID).
+
+## New
+- Two display modes: **Effervescent** (colorful, flowers) and **Austere** (minimal black and white). Your choice is remembered.
+- **Outfit Color Planner**: a 12-color wheel with complementary, analogous, triadic, monochrome, and with-neutrals palettes plus styling tips.
+- **Build & Match**: pick top, bottom, shoes, colors, and occasion; get a match check and an accessories picker that highlights items for the weather and occasion.
