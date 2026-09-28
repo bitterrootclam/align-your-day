@@ -53,3 +53,10 @@ input[type=checkbox]{width:28px;height:28px;margin:8px}
   #goals input[type=text]{min-height:44px}
   .row button{flex:1 1 40%}
 }
+@media(max-width:560px){
+  #goals li{grid-template-columns:auto 1fr auto;grid-template-areas:"cb area btn" "txt txt txt"}
+  #goals li>input[type=checkbox]{grid-area:cb}
+  #goals li .area{grid-area:area}
+  #goals li button{grid-area:btn}
+  #goals li input[type=text]{grid-area:txt}
+}
