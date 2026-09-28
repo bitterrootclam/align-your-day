@@ -98,3 +98,4 @@ function renderHistory(){
 }
 $('reset').onclick=()=>{if(confirm('Reset today?')){day=fresh();save();renderGoals();renderWater();$('learned').value='';$('review').innerHTML='';}};
 renderGoals();renderWater();renderHistory();getWeather();
+if('serviceWorker' in navigator&&location.protocol.startsWith('http'))navigator.serviceWorker.register('sw.js');
